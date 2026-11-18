@@ -1,6 +1,6 @@
 # Artifacts for paper: *Entanglement-Assisted Quantum Differential Privacy*
 
-This repository contains the code and data of the experiments in Sec. VI. We use Python 3.10.9 with `qiskit` 2.3.0, `qiskit-aer` 0.17.2, `qiskit-ibm-runtime` 0.52.0, `numpy`, `scipy` and `matplotlib` (see `requirements.txt`). Physical experiments were run on the `ibm_fez` QPU of the IBM Quantum platform, and simulations on a laptop with an Intel Core i7-8750H CPU and 16 GB memory. Our code is available via the anonymous link [https://anonymous.4open.science/r/EA-QDP_artifacts_SP-XXXX](https://anonymous.4open.science/r/EA-QDP_artifacts_SP-XXXX) (this site).
+This repository contains the code and data of the experiments in Sec. VI. We use Python 3.10.9 with `qiskit` 2.3.0, `qiskit-aer` 0.17.2, `qiskit-ibm-runtime` 0.52.0, `numpy`, `scipy` and `matplotlib` (see `requirements.txt`). Physical experiments were run on the `ibm_fez` QPU of the IBM Quantum platform, and simulations on a laptop with an Intel Core i7-8750H CPU and 16 GB memory. Our code is available via the anonymous link [https://anonymous.4open.science/r/EA-QDP_artifacts/](https://anonymous.4open.science/r/EA-QDP_artifacts/) (this site).
 
 The components of the anonymous repository are as follows:
 
