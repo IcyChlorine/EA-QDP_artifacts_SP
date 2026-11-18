@@ -1,0 +1,85 @@
+{
+ "description": "Sec. VI-A / Fig. 2: motivating example, E_XZ on one query qubit, oracle X^x, without (XZ_NR) and with (XZ_EA) reference.",
+ "count_key": "'<reference bits>|<system bits>': character i of each half is the outcome of qubit pair i (same index as character i of the secret string). Reference bits are measured after CNOT(R_i -> S_i) and H(R_i); system bits are the measured S_i. The reference half is empty when the adversary keeps no reference system (BV).",
+ "records": [
+  {
+   "experiment": "motivating",
+   "platform": "aer_simulator",
+   "configuration": "XZ_NR",
+   "n": 1,
+   "mechanism": "E_XZ",
+   "reference": false,
+   "parameter": {
+    "q": 0.3333333333333333
+   },
+   "calibration": null,
+   "shots": 4096,
+   "simulation": {
+    "method": "statevector",
+    "precision": "double",
+    "device_noise": null,
+    "circuit": "one system qubit with the Pauli channel of E_XZ",
+    "seed_simulator": 314159265
+   },
+   "runs": [
+    {
+     "secret": "0",
+     "shots": 2048,
+     "counts": {
+      "|0": 1369,
+      "|1": 679
+     }
+    },
+    {
+     "secret": "1",
+     "shots": 2048,
+     "counts": {
+      "|0": 672,
+      "|1": 1376
+     }
+    }
+   ]
+  },
+  {
+   "experiment": "motivating",
+   "platform": "aer_simulator",
+   "configuration": "XZ_EA",
+   "n": 1,
+   "mechanism": "E_XZ",
+   "reference": true,
+   "parameter": {
+    "q": 0.3333333333333333
+   },
+   "calibration": null,
+   "shots": 4096,
+   "simulation": {
+    "method": "statevector",
+    "precision": "double",
+    "device_noise": null,
+    "circuit": "hardware logical circuit (with environment qubits)",
+    "seed_transpiler": 41,
+    "seed_simulator": 20261113
+   },
+   "runs": [
+    {
+     "secret": "0",
+     "shots": 2048,
+     "counts": {
+      "0|0": 661,
+      "0|1": 673,
+      "1|0": 714
+     }
+    },
+    {
+     "secret": "1",
+     "shots": 2048,
+     "counts": {
+      "0|0": 688,
+      "0|1": 686,
+      "1|1": 674
+     }
+    }
+   ]
+  }
+ ]
+}

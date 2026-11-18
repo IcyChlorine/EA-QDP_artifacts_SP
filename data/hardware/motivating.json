@@ -1,0 +1,110 @@
+{
+ "description": "Sec. VI-A / Fig. 2: motivating example, E_XZ on one query qubit, oracle X^x, without (XZ_NR) and with (XZ_EA) reference.",
+ "count_key": "'<reference bits>|<system bits>': character i of each half is the outcome of qubit pair i (same index as character i of the secret string). Reference bits are measured after CNOT(R_i -> S_i) and H(R_i); system bits are the measured S_i. The reference half is empty when the adversary keeps no reference system (BV).",
+ "records": [
+  {
+   "experiment": "motivating",
+   "platform": "ibm_fez",
+   "configuration": "XZ_NR",
+   "n": 1,
+   "mechanism": "E_XZ",
+   "reference": false,
+   "parameter": {
+    "q": 0.3333333333333333
+   },
+   "calibration": null,
+   "shots": 4096,
+   "transpilation": {
+    "backend": "ibm_fez",
+    "optimization_level": 1,
+    "seed_transpiler": 41,
+    "twirling": false,
+    "dynamical_decoupling": false,
+    "error_mitigation": false
+   },
+   "runs": [
+    {
+     "secret": "0",
+     "shots": 2048,
+     "initial_layout": [
+      123,
+      136,
+      143
+     ],
+     "counts": {
+      "|0": 1375,
+      "|1": 673
+     }
+    },
+    {
+     "secret": "1",
+     "shots": 2048,
+     "initial_layout": [
+      123,
+      136,
+      143
+     ],
+     "counts": {
+      "|0": 701,
+      "|1": 1347
+     }
+    }
+   ]
+  },
+  {
+   "experiment": "motivating",
+   "platform": "ibm_fez",
+   "configuration": "XZ_EA",
+   "n": 1,
+   "mechanism": "E_XZ",
+   "reference": true,
+   "parameter": {
+    "q": 0.3333333333333333
+   },
+   "calibration": null,
+   "shots": 4096,
+   "transpilation": {
+    "backend": "ibm_fez",
+    "optimization_level": 1,
+    "seed_transpiler": 41,
+    "twirling": false,
+    "dynamical_decoupling": false,
+    "error_mitigation": false
+   },
+   "runs": [
+    {
+     "secret": "0",
+     "shots": 2048,
+     "initial_layout": [
+      122,
+      123,
+      136,
+      143
+     ],
+     "counts": {
+      "0|0": 704,
+      "0|1": 630,
+      "1|0": 648,
+      "1|1": 66
+     }
+    },
+    {
+     "secret": "1",
+     "shots": 2048,
+     "initial_layout": [
+      122,
+      123,
+      136,
+      143
+     ],
+     "counts": {
+      "0|0": 638,
+      "0|1": 642,
+      "1|0": 62,
+      "1|1": 706
+     }
+    }
+   ]
+  }
+ ]
+}
